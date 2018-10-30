@@ -1,3 +1,3 @@
 # unify
 
-Collection of scripts / tools for use with Unify PABX systems
+Collection of scripts / tools for use with Unify PABX systems that I wrote.
