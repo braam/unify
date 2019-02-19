@@ -13,9 +13,10 @@ read -s password
 #Grep osbiz_ file names from html, remove first ">" char.
 wget --user=$USER --password=$password -O - $URL | grep -Eo ">osbiz_?\S+?\.tar" | cut -c 2- > $LIST
 sleep 1
-#Check if file not exists, then start download.
+#Check if file not exists, then start download. Remove older version by checking latest 8 chars.
 while read f; do 
     if [ ! -f "$f" ]; then
+        rm *"${f: -8}"
         wget --user=$USER --password=$password $URL/$f
     else
         echo $f : OK
