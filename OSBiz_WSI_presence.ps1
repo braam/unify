@@ -46,19 +46,20 @@ $SessionID = $xml.LOGIN.ID
 Write-Host $xml.LOGIN.ERROR
 
 
-# Set presence with numerical state
-# NUM   STATE
-# ---   -----
-# 1     Office
-# 2     Meeting
-# 3     Sick
-# 4     Break
-# 5     GoneOut
-# 6     Holiday
-# 7     Lunch
-# 8     Home
-# 9     DND
+<# Set presence with numerical state
+ NUM   STATE
+ ---   -----
+ 1     Office
+ 2     Meeting
+ 3     Sick
+ 4     Break
+ 5     GoneOut
+ 6     Holiday
+ 7     Lunch
+ 8     Home
+ 9     DND
 #$urlPresence = "$OSBizURL/gadgetapi?cmd=SetPresence&user=$User&presence=$presence&ptime=$ptime&gsSession=$SessionID"
+#>
 $urlPresence = "$OSBizURL/gadgetapi?cmd=SetPresence&user=$User&presence=$presence&gsSession=$SessionID"
 Invoke-WebRequest -Uri $urlPresence | Select-Object -ExpandProperty content | Out-File WSI_presence.xml
 [xml]$xml = Get-Content WSI_presence.xml
