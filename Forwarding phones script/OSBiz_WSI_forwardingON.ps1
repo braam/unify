@@ -16,7 +16,7 @@
 #Global variables
 $OSBizURL = "https://10.242.2.200:8802/cgi-bin"
 $User = "8867"
-$Pass = "258012"
+$Pass = "xxxxxx"
 
 
 # IGNORE SELF SINGED CERTIFICATES.
