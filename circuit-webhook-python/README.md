@@ -19,7 +19,9 @@ from circuit_webhook import Circuit
 
 circuit = Circuit(url='https://eu.yourcircuit.com/rest/v2/webhooks/incoming/XXX')
 circuit.post(text="Hello, world.")
+circuit.post(text="<b>Bold text</b><br /><i>Italic text</i>"
 ```
+
 
 ## Getting started
 
