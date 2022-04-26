@@ -1,3 +1,11 @@
+'''
+Privilige escalation possible from basic WBM user to expert role. This is possible due to:
+ - Allowed any extension for license file upload, like .jsp files.
+ - Directory traversal to other directory then WEB-INF (default license upload file location).
+ 
+ *\@ braam.vanhavermaet*bkm.be
+'''
+
 import requests, urllib3, sys, os
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
