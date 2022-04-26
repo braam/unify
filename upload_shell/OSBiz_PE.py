@@ -1,7 +1,8 @@
 '''
 Privilige escalation possible from basic WBM user to expert role. This is possible due to:
+ - All user roles can activate license file, even on basic user role the option is not visible in WBM.
  - Allowed any extension for license file upload, like .jsp files.
- - Directory traversal to other directory then WEB-INF (default license upload file location).
+ - Directory traversal to other directory then WEB-INF (default license upload file location) and therefore accessable for execution.
  
  *\@ braam.vanhavermaet*bkm.be
 '''
